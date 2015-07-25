@@ -31,13 +31,16 @@ public class ImageDownTest {
 	private static String linkUrl = "http://www.supercars.net/gallery/119513/3140/1.html";
 
 	// The path of the folder that you want to save the images to
-	private static final String folderPath = "/home/takion77/scrapping";
+//	private static final String folderPath = "/home/takion77/scrapping";
+	private static final String folderPath = "D:\\scrapping";
 	private static String fileName;
 	private static Map<String, String> rst = new HashMap<String, String>();
 
 	public static void main(String[] args) {
-		fileName = "/meta.txt";
-		String fileName1 = "/meta_out.txt";
+//		fileName = "/meta.txt";
+//		String fileName1 = "/meta_out.txt";
+		fileName = "\\meta.txt";
+		String fileName1 = "\\meta_out.txt";
 		List<String> excludeList = new ArrayList<String>();
 //		excludeList.add("http://www.supercars.net/gallery/119513/3114/1.html");
 		int cnt =0;

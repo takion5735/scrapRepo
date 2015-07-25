@@ -25,17 +25,24 @@ import com.eugenefe.mvfeed.util.MultipartUtility;
 public class IsinMasterTestNew {
 	private final static Logger logger = LoggerFactory.getLogger(IsinMasterTestNew.class);
 	private static Properties properties = new Properties();
-	private static String filePath = "/home/takion77/isincode/isinMaster";
+//	private static String filePath = "/home/takion77/isincode/isinMaster";
+	private static String filePath = "D:\\Dev\\isincode\\isinMaster\\";
 	
 	private static List<IsinMaster> rst = new ArrayList<IsinMaster>();
 
 	public static void main(String[] args) {
-		String bssd = "2013";
-		String stDate = bssd+"0101";
-//		String endDate =bssd +"28";
-//		String endDate =bssd +"30";
-		String endDate =bssd+ "1231";
+//		String bssd = "2013";
+//		String stDate = bssd+"0101";
+////		String endDate =bssd +"28";
+////		String endDate =bssd +"30";
+//		String endDate =bssd+ "1231";
 		
+		
+		String bssd = "201403";
+		String stDate = bssd+"01";
+		String endDate =bssd +"02";
+//		String endDate =bssd +"30";
+//		String endDate =bssd+ "31";
 		try{
 			properties.load(IsinMasterTestNew.class.getResourceAsStream("/url.properties"));
 			String url = properties.getProperty("isinSearch");

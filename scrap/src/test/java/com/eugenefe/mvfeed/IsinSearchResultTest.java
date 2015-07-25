@@ -65,7 +65,7 @@ public class IsinSearchResultTest {
 //			logger.info("Html Size : {},{}", _rows.size(), doc.toString());
 			for( Element _row : _rows){
 				for(Element child : _row.children()){
-					logger.info("Row1: {}: {}", child.text());
+					logger.info("Row1: {}: {}", child, child.text());
 					
 				}
 			}

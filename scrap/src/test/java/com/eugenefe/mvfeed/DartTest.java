@@ -17,7 +17,8 @@ import com.eugenefe.mvfeed.dart.DartReport;
 public class DartTest {
 	private final static Logger logger = LoggerFactory.getLogger(DartTest.class);
 	private static Properties properties = new Properties();
-	private static String filePath = "/home/takion77/isincode/dartCompany";
+//	private static String filePath = "/home/takion77/isincode/dartCompany";
+	private static String filePath = "D:\\Dev\\dartCompany\\";
 
 	private static Set<DartReport> rst = new HashSet<DartReport>();
 
@@ -25,11 +26,12 @@ public class DartTest {
 		int index =0;
 		try {
 			properties.load(DartTest.class.getResourceAsStream("/url.properties"));
-			 String url = properties.getProperty("dart");
-//			String url = properties.getProperty("dartCorp");
+//			 String url = properties.getProperty("dart");
+			String url = properties.getProperty("dartCorp");
 //			int pageNum = getPageNum(url);
+			 
 			Document doc = getDocument(url);
-//			logger.info("doc : {}", doc);
+			logger.info("doc1 : {}", doc);
 			Elements contents = doc.select("div[class=table_list]>table>tbody>tr");
 			
 			for(Element el : contents){
@@ -79,7 +81,7 @@ public class DartTest {
 			doc = Jsoup.connect(url).timeout(10000000)
 					.data("currentPage", "2")
 					// .data("searchIndex","2")
-					 .data("textCrpNm", "援����뻾")
+					 .data("textCrpNm", "")
 					 .data("textCrpCik", "00386937")
 					 .data("startDate", "20140103")
 					 .data("endDate", "20140703")
@@ -93,6 +95,7 @@ public class DartTest {
 			
 			String[] pageString = aa.text().split("]");
 			logger.info("aa:{}", aa.text());
+			
 			int indexname = pageString[0].lastIndexOf("/");
 			String pageNum = pageString[0].substring(indexname + 1,	pageString[0].length());
 			
@@ -108,9 +111,9 @@ public class DartTest {
 		Document doc;
 		try {
 			doc = Jsoup.connect(url).timeout(1000000000)
-					.data("currentPage", "2")
+					.data("currentPage", "1")
 					// .data("searchIndex","2")
-					 .data("textCrpNm", "援����뻾")
+//					 .data("textCrpNm", "21세기조선")
 //					 .data("textCrpCik", "00386937")
 					 .data("startDate", "20140103")
 					 .data("endDate", "20140703")

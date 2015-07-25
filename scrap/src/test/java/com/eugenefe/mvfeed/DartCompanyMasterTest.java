@@ -19,7 +19,8 @@ import com.eugenefe.mvfeed.dart.DartCompany;
 public class DartCompanyMasterTest {
 	private final static Logger logger = LoggerFactory.getLogger(DartCompanyMasterTest.class);
 	private static Properties properties = new Properties();
-	private static String filePath = "/home/takion77/isincode/dartCompany";
+//	private static String filePath = "/home/takion77/isincode/dartCompany";
+	private static String filePath = "D:\\Dev\\DartCompany\\dartCompany";
 
 	private static List<DartCompany> rst = new ArrayList<DartCompany>();
 
@@ -84,7 +85,7 @@ public class DartCompanyMasterTest {
 			if(arr.length==6){
 				String zz = el.child(0).attr("title").split(":")[4];
 //TODO :String check
-				int idx = zz.lastIndexOf("");
+				int idx = zz.lastIndexOf("2");
 				temp.setBizNum(zz.substring(0, idx));
 			}
 			

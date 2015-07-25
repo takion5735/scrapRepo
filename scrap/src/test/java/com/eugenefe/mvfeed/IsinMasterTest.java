@@ -19,15 +19,17 @@ import com.eugenefe.mvfeed.isin.IsinMaster;
 
 public class IsinMasterTest {
 	private final static Logger logger = LoggerFactory.getLogger(IsinMasterTest.class);
+	
 	private static Properties properties = new Properties();
-	private static String filePath = "/home/takion77/isincode/isinMaster";
+//	private static String filePath = "/home/takion77/isincode/isinMaster";
+	private static String filePath = "D:\\Dev\\isincode\\isinMaster\\";
 	
 	private static List<IsinMaster> rst = new ArrayList<IsinMaster>();
 
 	public static void main(String[] args) {
 		String bssd = "201403";
 		String stDate = bssd+"01";
-//		String endDate =bssd +"28";
+//		String endDate =bssd +"02";
 //		String endDate =bssd +"30";
 		String endDate =bssd+ "31";
 		
@@ -51,7 +53,7 @@ public class IsinMasterTest {
 		BufferedWriter out = new BufferedWriter(new FileWriter(filePath+bssd+".txt"));
 		for(IsinMaster aa : rst){
 			logger.info("RST: {},{}", aa.getEprodType(), aa.getProdName());
-				StringBuffer str = new StringBuffer();
+			StringBuffer str = new StringBuffer();
 				str.append(aa.getProdType()).append(";")
 					.append(aa.getProdId()).append(";")
 					.append(aa.getProdName()).append(";")

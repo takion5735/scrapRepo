@@ -29,7 +29,7 @@ public class ApacheHttpClientTest {
 		Document doc;
 		
 		HttpPost httppost = new HttpPost(url);
-		HttpEntity entity = aaaa("1").build();
+		HttpEntity entity = buildEntity("1").build();
 		httppost.setEntity(entity);
 		
 		CloseableHttpClient client = HttpClients.createDefault();
@@ -68,7 +68,7 @@ public class ApacheHttpClientTest {
 		}
 	}
 	
-	private static MultipartEntityBuilder aaaa(String pageIndex){
+	private static MultipartEntityBuilder buildEntity(String pageIndex){
 		MultipartEntityBuilder builder = MultipartEntityBuilder.create();        
 //		boundary=----WebKitFormBoundaryumzVNYwELedulDQZ
 		
