@@ -20,10 +20,14 @@ public class ImageDownTest_site1 {
 	private static final String webSiteURL = "http://www.supercars.net/garage2/119513/galleries.html";
 
 	// The path of the folder that you want to save the images to
-	private static final String folderPath = "/home/takion77/scrapping";
-	private static String rootLinkFile = folderPath+ "/meta.txt";
-	private static String subLinkFile = folderPath +"/meta_out.txt";
-	private static String imageListFile = folderPath+"/meta_img.txt";
+//	private static final String folderPath = "/home/takion77/scrapping";
+//	private static String rootLinkFile = folderPath+ "/meta.txt";
+//	private static String subLinkFile = folderPath +"/meta_out.txt";
+//	private static String imageListFile = folderPath+"/meta_img.txt";
+	private static final String folderPath = "D:\\scrapping";
+	private static String rootLinkFile = folderPath+ "\\meta.txt";
+	private static String subLinkFile = folderPath +"\\meta_out.txt";
+	private static String imageListFile = folderPath+"\\meta_img.txt";
 
 	private static Map<String, String> rst = new HashMap<String, String>();
 	private static Map<String, String> imgRst = new HashMap<String, String>();
