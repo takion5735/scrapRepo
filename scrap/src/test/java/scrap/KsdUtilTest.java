@@ -1,6 +1,9 @@
 package scrap;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,9 +26,11 @@ public class KsdUtilTest {
 	private static StringBuffer strBuffer = new StringBuffer();
 	 
 	public static void main(String[] args) {
-		String isin ="KR6693321335";
+//		String isin ="KR6693321335";
 //		String isin ="KR6709346573";
+		String isin ="KR66823123A6";
 		
+		Map<ElsHeader, String> rst = new HashMap<ElsHeader, String>();
 		
 //		String temp = KsdUtil.getElsInfo(isin);
 //		String temp = KsdUtil.getElsStrikePrice(isin);
@@ -34,8 +39,22 @@ public class KsdUtilTest {
 		
 //		logger.info("xml : {} ", temp);
 		
-		KsdUtil.getElsInfoMap(isin);
+//		KsdUtil.getElsInfoMap(isin);
 //		KsdUtil.getElsStrikePriceMap(isin);
+//		KsdUtil.getElsScheduleMap(isin);
+//		KsdUtil.getElsBaseInfoMap(isin);
+//		KsdUtil.getElsSchedule(isin);
+//		KsdUtil.getElsBaseInfo(isin);
+//		KsdUtil.getElsDataDoc(EelsDataType.BASIC, isin);
+		
+		rst = KsdUtil.getElsDataMap(EKsdElsDataGroup.BASIC, isin);
+//		rst = KsdUtil.getElsDataMap(EKsdElsDataGroup.PAYOFF, isin);
+//		rst = KsdUtil.getElsDataMap(EKsdElsDataGroup.UNDERLYING, isin);
+//		rst = KsdUtil.getElsDataMap(EKsdElsDataGroup.STRIKE, isin);
+		
+		for(Map.Entry<ElsHeader,String> entry : rst.entrySet()){
+			logger.info("ddd : {},{}", entry.getKey().toString(), entry.getValue());
+		}
 	}
 	
 
