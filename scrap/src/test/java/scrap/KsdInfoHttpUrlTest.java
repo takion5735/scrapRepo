@@ -87,17 +87,17 @@ public class KsdInfoHttpUrlTest {
 //			bassetXrcList();
 			StringBuffer rst = new StringBuffer();
 			rst.append(callSeveltService(elsReferer, issueInfoPayload)).append("cn")
-				.append(callSeveltService(elsReferer, exerPayload)).append("\n")
-				.append(callSeveltService(elsReferer, schedulePayload)).append("\n")
-				.append(callSeveltService(elsReferer, baseInfoPayload)).append("\n")
+//				.append(callSeveltService(elsReferer, exerPayload)).append("\n")
+//				.append(callSeveltService(elsReferer, schedulePayload)).append("\n")
+//				.append(callSeveltService(elsReferer, baseInfoPayload)).append("\n")
 				;
 //			String xml1 = callSeveltService(elsReferer, issueInfoPayload);
 //			String xml2 = callSeveltService(elsReferer, exerPayload);
 //			String xml3 = callSeveltService(elsReferer, schedulePayload);
 //			String xml = callSeveltService(elsReferer, baseInfoPayload);
-//			logger.info("xml : {} ", rst.toString());
+			logger.info("xml : {} ", rst.toString());
 			
-			searchProduct();
+//			searchProduct();
 	}
 
 	

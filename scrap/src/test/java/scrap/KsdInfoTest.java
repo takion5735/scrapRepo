@@ -44,7 +44,7 @@ public class KsdInfoTest {
 			doc = Jsoup.connect(url)
 					.userAgent(agent)
 					.referrer(referer)
-					.header("Content-Type", "application/xml")
+//					.header("Content-Type", "application/xml")
 //					.header("submissionid" , "submission_issuRemaList")
 //					.header("payload", payload)
 					.data("action", "issuInfoList")
